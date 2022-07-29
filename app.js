@@ -54,9 +54,15 @@ let currentItem = 3;
 
 //load initial item
 window.addEventListener('DOMContentLoaded', function() {
-  const item = reviews[currentItem];
+  showPerson(currentItem);
+});
+
+//show persona based on item
+
+function showPerson(person) {
+  const item = reviews[person];
   img.src = item.img;
   author.textContent = item.name;
   job.textContent = item.job;
   info.textContent = item.text;
-})
+}
