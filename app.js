@@ -50,7 +50,7 @@ const nextBtn = document.querySelector('.next-btn');
 const randomBtn = document.querySelector('.random-btn');
 
 // set starting item
-let currentItem = 3;
+let currentItem = 0;
 
 //load initial item
 window.addEventListener('DOMContentLoaded', function() {
@@ -71,5 +71,8 @@ function showPerson(person) {
 
 nextBtn.addEventListener('click', function() {
   currentItem++;
+  if (currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
   showPerson(currentItem);
 })
