@@ -85,3 +85,11 @@ prevBtn.addEventListener('click', function() {
   }
   showPerson();
 })
+
+// button suprise me need show a random person from the array reviews
+
+randomBtn.addEventListener('click', function() {
+  currentItem = Math.floor(Math.random() * reviews.length);
+  // Math.floor(Math.random() * colors.length)
+  showPerson();
+})
